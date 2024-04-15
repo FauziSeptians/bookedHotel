@@ -45,7 +45,7 @@ Field database promo :
 - policy
 
 Endpoint Berita: 
-create : POST /api/crete/news
+create : POST /api/crete/new
 views : Get /api/news
 
 Endpoint Promo :

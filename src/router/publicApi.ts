@@ -6,6 +6,6 @@ export const publicRouter = express.Router();
 publicRouter.get("/", (req, res) => {
       return res.status(200).send("mask")
 })
-
-publicRouter.get("/api/crete/users", UserController.Register)
+publicRouter.post("/api/crete/users", UserController.Register)
+publicRouter.post("/api/users", UserController.Login)
 
