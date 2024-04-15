@@ -1,21 +1,9 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import { UserController } from "./src/controllers/user-controllers";
+import { web } from "./src/application/web";
 
-const app: Express = express();
-const PORT: number = 5000;
-
-app.use(cors());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-app.get("/", (req: Request, res: Response) => {
-  res.send("Server running on " + PORT);
-});
-
-app.get("/api/crete/users", UserController.Register)
-
+web.listen(5000, () => {
+  console.log("Listening on port 5000");
+})
 
