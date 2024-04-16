@@ -10,6 +10,6 @@ publicRouter.get("/", (req, res) => {
 })
 publicRouter.post("/api/crete/users", UserController.Register)
 publicRouter.post("/api/users", UserController.Login)
-publicRouter.post("/api/crete/news", newsController.createNews)
+publicRouter.post("/api/create/news", newsController.createNews)
 publicRouter.get("/api/news", newsController.getNews)
 
