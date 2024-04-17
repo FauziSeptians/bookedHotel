@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from "express";
-import { HotelServices } from "../services/hotel.services";
+import { HotelServices } from "../services/hotel-services";
 
 export class HotelController {
     static async createHotel (req: Request, res: Response) {

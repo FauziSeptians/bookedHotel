@@ -14,6 +14,10 @@ const roomSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Hotel', // Referensi ke HotelSchema
       required: true
+    },
+    bookedId : {
+      type : mongoose.Schema.Types.ObjectId,
+      ref : 'booked', 
     }
   });
   

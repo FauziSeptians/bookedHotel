@@ -27,4 +27,29 @@ export class HotelServices {
 
     return News;
   }
+
+  static async updateHotel({id , newData } : {id: string, newData : any}){
+
+    const { Title, Description,Detail, Policy, Price  } = newData;
+
+    if(!id){
+      throw "Id must be filled"
+    }
+
+    if (!Title || !Description || !Policy || !Price || !Detail) {
+      throw "Data must be filled";
+    }
+
+
+    const isDataExists = await HotelModel.findById(id).exec();
+
+    if (!isDataExists) {
+      throw new Error(`Hotel with ID ${id} not found`);
+    }
+
+    const Update = await HotelModel.findOneAndUpdate({_id : id},newData)
+
+    return Update;
+    
+  }
 }
