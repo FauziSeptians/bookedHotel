@@ -95,4 +95,39 @@ export class BookedServices {
         return groupedData;
     }
 
+    static async searchSpesificAvailableRoom(dataRequest : any){
+        const {Checkin, Checkout, HotelID} = dataRequest;
+
+        if(!Checkin || !Checkout){
+            throw new ResponseError(400, "Data mus be filled")
+        }
+        const data = await BookedModel.find()
+        const dataRoom = await RoomModel.find();
+
+   
+
+        const BookedRoom = data.filter((item : any) => {
+            let checkin = new Date(Checkin)
+            let checkout = new Date(Checkout)
+            let startBooked = new Date(item.startBooked)
+            let endBooked = new Date(item.endBooked)
+
+
+            const RoomBooked = isRoomBooked( checkin  ,  checkout,  startBooked,  endBooked)
+            console.log(RoomBooked);
+           
+            return RoomBooked;
+     
+        })
+
+        console.log(BookedRoom)
+        console.log(dataRoom);
+
+        const availableRoom = filterRoomsByBookings(dataRoom, BookedRoom)
+
+        const dataFilteredByHotel = availableRoom.filter((item : any) => item.hotelId === HotelID)
+
+        return dataFilteredByHotel;
+    }
+
 }

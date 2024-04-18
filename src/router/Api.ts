@@ -4,6 +4,7 @@ import { HotelController } from "../controllers/hotel-controllers";
 import { RoomController } from "../controllers/room-controller";
 import { BookedController } from "../controllers/booked-controller";
 import { errorMiddleware } from "../middleware/error-middleware";
+import { ResponseError } from "../Error/response-error";
 
 
 
@@ -25,6 +26,33 @@ privateRouter.delete("/api/delete/room/:id", RoomController.deleteRoom);
 privateRouter.post("/api/create/booked", BookedController.create)
 privateRouter.delete("/api/delete/booked/:id", BookedController.delete)
 privateRouter.post("/api/available/booked", BookedController.searchAvailableRoom)
+privateRouter.post("/api/available/hotel/booked", BookedController.searchSpesificAvailableRoom);
 privateRouter.get("/api/booked", BookedController.getBookedRoom)
+
+
+// Color
+privateRouter.get("/api/color", (req, res) => {
+    const color = req.body.color;
+
+    if (!color) {
+        throw new ResponseError(404, "Data color not found");
+    }
+
+    if (color == "black") {
+        res.status(200).send({
+            message: "OK",
+            statusCode: 200,
+            data: "white"
+        })
+    } else {
+        res.status(200).send({
+            message: "OK",
+            statusCode: 200,
+            data: "black"
+        })
+    }
+})
+
+
 
 

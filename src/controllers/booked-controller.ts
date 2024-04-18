@@ -42,7 +42,20 @@ export class BookedController {
             try {
                   const data = await BookedServices.searchAvailableRoom(req.body);
 
+                  return res.status(200).send({
+                        status: 200,
+                        message: "OK",
+                        additionalData: data
+                  })
+            } catch (err) {
+                  next(err)
+            }
 
+      }
+
+      static async searchSpesificAvailableRoom(req: Request, res: Response, next: NextFunction) {
+            try {
+                  const data = await BookedServices.searchAvailableRoom(req.body);
 
                   return res.status(200).send({
                         status: 200,
@@ -56,7 +69,6 @@ export class BookedController {
       }
 
       static async getBookedRoom(req: Request, res: Response, next: NextFunction) {
-
             try {
                   const data = await BookedServices.getBooked();
 
