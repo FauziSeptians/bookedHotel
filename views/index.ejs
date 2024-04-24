@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+   <%- include('layouts/header.ejs') %>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+   <body>
+      <%- include('layouts/navigation.ejs') %>
+
+      <section class="section__container booking__container">
+         <form action="/" class="booking__form">
+            <div class="input__group">
+               <span><i class="ri-calendar-2-fill"></i></span>
+               <div>
+                  <label for="check-in">CHECK-IN</label>
+                  <input type="text" placeholder="Check In" />
+               </div>
+            </div>
+            <div class="input__group">
+               <span><i class="ri-calendar-2-fill"></i></span>
+               <div>
+                  <label for="check-out">CHECK-OUT</label>
+                  <input type="text" placeholder="Check Out" />
+               </div>
+            </div>
+            <div class="input__group">
+               <span><i class="ri-user-fill"></i></span>
+               <div>
+                  <label for="guest">GUEST</label>
+                  <input type="text" placeholder="Guest" />
+               </div>
+            </div>
+            <div class="input__group input__btn">
+               <button class="btn">CHECK OUT</button>
+            </div>
+         </form>
+      </section>
+
+      <section class="section__container about__container" id="about">
+         <div class="about__image">
+            <img src="assets/about5.jpg" alt="about" />
+         </div>
+         <div class="about__content">
+            <p class="section__subheader">ABOUT US</p>
+            <h2 class="section__header">5 Start hotel</h2>
+            <p class="section__description">
+               Welcome to Vimiga resort, a luxurious 5-star retreat nestled
+               along the captivating shoreline. Our resort offers unparalleled
+               elegance and hospitality, ensuring an unforgettable stay amidst
+               breathtaking coastal vistas. Each spacious accommodation boasts
+               stunning ocean views, complemented by meticulous attention to
+               detail for the utmost comfort
+            </p>
+            <div class="about__btn">
+               <button class="btn">Read More</button>
+            </div>
+         </div>
+      </section>
+
+      <section class="section__container room__container">
+         <p class="section__subheader">OUR LIVING ROOM</p>
+         <h2 class="section__header">CONVINENT PLACE.</h2>
+         <div class="room__grid">
+            <!-- <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-1.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Deluxe Ocean View</h4>
+                  <p>
+                     Bask in luxury with breathtaking ocean views from your
+                     private suite.
+                  </p>
+                  <h5>Starting from <span>$299/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div> -->
+            <!-- <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-2.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Executive Cityscape Room</h4>
+                  <p>
+                     Experience urban elegance and modern comfort in the heart
+                     of the city.
+                  </p>
+                  <h5>Starting from <span>$199/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div>
+            <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-3.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Family Garden Retreat</h4>
+                  <p>
+                     Spacious and inviting, perfect for creating cherished
+                     memories with loved ones.
+                  </p>
+                  <h5>Starting from <span>$249/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div> -->
+         </div>
+      </section>
+
+      <section class="service" id="service">
+         <div class="section__container service__container">
+            <div class="service__content">
+               <p class="section__subheader">SERVICES</p>
+               <h2 class="section__header">Explore Our Service.</h2>
+               <ul class="service__list">
+                  <li>
+                     <span><i class="ri-shield-star-line"></i></span>
+                     Food & Restaurant
+                  </li>
+                  <li>
+                     <span><i class="ri-24-hours-line"></i></span>
+                     24 Hours Room Service
+                  </li>
+                  <li>
+                     <span><i class="ri-headphone-line"></i></span>
+                     Cozy
+                  </li>
+                  <li>
+                     <span><i class="ri-map-2-line"></i></span>
+                     Strategy Place
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </section>
+
+      <section class="section__container banner__container">
+         <div class="banner__content">
+            <div class="banner__card">
+               <h4>200+</h4>
+               <p>Rooms</p>
+            </div>
+            <div class="banner__card">
+               <h4>90+</h4>
+               <p>Staff</p>
+            </div>
+            <div class="banner__card">
+               <h4>1000+</h4>
+               <p>Clients</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="explore" id="explore">
+         <p class="section__subheader">EXPLORE</p>
+         <h2 class="section__header">What's New Today.</h2>
+         <div class="explore__bg">
+            <div class="explore__content">
+               <p class="section__description">10th MAR 2023</p>
+               <h4>A New Menu Is Available In Our Hotel.</h4>
+               <button class="btn">Continue</button>
+            </div>
+         </div>
+      </section>
+
+      <section class="more" id="more">
+         <h1>Meet Our Team</h1>
+         <div class="wrapper1">
+            <div class="section1"></div>
+         </div>
+      </section>
+
+      <%- include('layouts/footer.ejs') %>
+      <script>
+         $(document).ready(function () {
+            $.ajax({
+               url: "/data/mahasiswa",
+               type: "GET",
+               dataType: "json", // Specify data type as JSON
+               success: function (data) {
+                  // Process the received data
+                  const dataUser = data.additionalData;
+
+                  dataUser.map((item) => {
+                     console.log("test");
+                     $(".section1").append(` <div class="kartu">
+                  <p>${item.name} - ${item.nim}</p>
+                  <img src="${item.image}" alt="" />
+                  <p>${item.quotes}</p>
+                  <a href=""
+                     ><i class="fab fa-instagram" style="color: #ffffff"></i
+                  ></a>
+                  <a href=""
+                     ><i class="fab fa-twitter" style="color: #ffffff"></i
+                  ></a>
+                  <a href=""
+                     ><i class="fab fa-linkedin" style="color: #ffffff"></i
+                  ></a>
+               </div>`);
+                  });
+               },
+               error: function (error) {
+                  console.error("Error fetching users:", error);
+                  // Handle errors (display an error message to the user)
+               },
+            });
+
+            $.ajax({
+               url: "/api/room",
+               type: "GET",
+               dataType: "json",
+               beforeSend: function (xhr) {
+                  xhr.setRequestHeader(
+                     "Authorization",
+                     `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im11aGFtbWFkIGZhdXppMSIsImlhdCI6MTcxMzgwNTQ3NywiZXhwIjoxNzEzODA5MDc3fQ.OrtETxRFQJYJLgPm9JNMNx8T7lX3xiDx6M2h0QyjrKE`
+                  );
+               },
+               success: function (data) {
+                  console.log("data room");
+                  console.log(data);
+
+                  const dataRoom = data.additionalData;
+
+                  dataRoom.map((item, index) => {
+                     if (index < 3) {
+                        $(".room__grid").append(`
+<div class="room__card">
+   <div class="room__card__image">
+      <img src="assets/room-1.jpg" alt="room" />
+      <div class="room__card__icons">
+         <span><i class="ri-heart-fill"></i></span>
+         <span><i class="ri-paint-fill"></i></span>
+         <span><i class="ri-shield-star-line"></i></span>
+      </div>
+   </div>
+   <div class="room__card__details">
+      <h4>${item.roomnumber}</h4>
+      <p>
+         ${item.description}
+      </p>
+      <h5>Starting from <span>${item.price}/night</span></h5>
+      <button class="btn">${item.types}</button>
+   </div>
+</div>`);
+                     }
+                  });
+               },
+               error: function (error) {
+                  console.error("Error fetching users:", error);
+                  // Handle errors (display an error message to the user)
+               },
+            });
+         });
+      </script>
+   </body>
+</html>

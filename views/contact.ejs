@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header.ejs') %>
+  <body>
+    <%- include('layouts/navigation.ejs') %>
+
+    <section class="section__container booking__container">
+      <form action="/" class="booking__form">
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-in">CHECK-IN</label>
+            <input type="text" placeholder="Check In" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-out">CHECK-OUT</label>
+            <input type="text" placeholder="Check Out" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-user-fill"></i></span>
+          <div>
+            <label for="guest">GUEST</label>
+            <input type="text" placeholder="Guest" />
+          </div>
+        </div>
+        <div class="input__group input__btn">
+          <button class="btn">CHECK OUT</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="more" id="more">
+        <h1>Meet Our Team</h1>
+        <div class="wrapper1">
+          <div class="section1">
+            <!-- 1 -->
+    
+            <div class="kartu">
+                <p>Michael Manalu (535220073)</p>
+                <img src="assets/micheal.jpg" alt="" />
+                <p>
+                  "Failure is a process to success"
+                </p>
+                <a href=""
+                  ><i class="fab fa-instagram" style="color: #ffffff"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter" style="color: #ffffff"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-linkedin" style="color: #ffffff"></i
+                ></a>
+            </div>
+    
+            <!-- 2 -->
+            <div class="kartu">
+                <p>Vincent Callista (535220075)</p>
+                <img src="assets/vincent.jpg" alt="" />
+                <p>
+                  "Do with your heart"
+                </p>
+                <a href=""
+                  ><i class="fab fa-instagram" style="color: #ffffff"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter" style="color: #ffffff"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-linkedin" style="color: #ffffff"></i
+                ></a>
+            </div>
+    
+            <!-- 3 -->
+            <div class="kartu">
+              <p>Yoga Ramadhani (535220247)</p>
+                <img src="assets/Yoga.jpg" alt="" />
+                <p>
+                  "Money surely can buy happiness"
+                </p>
+                <a href=""
+                  ><i class="fab fa-instagram" style="color: #ffffff"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-twitter" style="color: #ffffff"></i
+                ></a>
+                <a href=""
+                  ><i class="fab fa-linkedin" style="color: #ffffff"></i
+                ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <%- include('layouts/footer.ejs') %>
+  
+    </body>
+  </html>
+
+  

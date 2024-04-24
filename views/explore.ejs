@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header.ejs') %>
+  <body>
+    <%- include('layouts/navigation.ejs') %>
+
+    <section class="section__container booking__container">
+      <form action="/" class="booking__form">
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-in">CHECK-IN</label>
+            <input type="text" placeholder="Check In" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-out">CHECK-OUT</label>
+            <input type="text" placeholder="Check Out" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-user-fill"></i></span>
+          <div>
+            <label for="guest">GUEST</label>
+            <input type="text" placeholder="Guest" />
+          </div>
+        </div>
+        <div class="input__group input__btn">
+          <button class="btn">CHECK OUT</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="explore" id="explore">
+        <p class="section__subheader">EXPLORE</p>
+        <h2 class="section__header">What's New Today.</h2>
+        <div class="explore__bg">
+          <div class="explore__content">
+            <p class="section__description">10th MAR 2023</p>
+            <h4>A New Menu Is Available In Our Hotel.</h4>
+            <button class="btn">Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <%- include('layouts/footer.ejs') %>
+    </body>
+  </html>
+
+ 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header.ejs') %>
+  <body>
+    <%- include('layouts/navigation.ejs') %>
+
+    <section class="section__container booking__container">
+      <form action="/" class="booking__form">
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-in">CHECK-IN</label>
+            <input type="text" placeholder="Check In" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-out">CHECK-OUT</label>
+            <input type="text" placeholder="Check Out" />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-user-fill"></i></span>
+          <div>
+            <label for="guest">GUEST</label>
+            <input type="text" placeholder="Guest" />
+          </div>
+        </div>
+        <div class="input__group input__btn">
+          <button class="btn">CHECK OUT</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="service" id="service">
+        <div class="section__container service__container">
+          <div class="service__content">
+            <p class="section__subheader">SERVICES</p>
+            <h2 class="section__header">Explore Our Service.</h2>
+            <ul class="service__list">
+              <li>
+                <span><i class="ri-shield-star-line"></i></span>
+                Food & Restaurant
+              </li>
+              <li>
+                <span><i class="ri-24-hours-line"></i></span>
+                24 Hours Room Service
+              </li>
+              <li>
+                <span><i class="ri-headphone-line"></i></span>
+                Cozy
+              </li>
+              <li>
+                <span><i class="ri-map-2-line"></i></span>
+                Strategy Place
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+  
+      <%- include('layouts/footer.ejs') %>
+    </body>
+  </html>

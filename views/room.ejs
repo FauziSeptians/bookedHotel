@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+   <%- include('layouts/header.ejs') %>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+   <body>
+      <%- include('layouts/navigation.ejs') %>
+
+      <section class="section__container booking__container">
+         <form action="/" class="booking__form">
+            <div class="input__group">
+               <span><i class="ri-calendar-2-fill"></i></span>
+               <div>
+                  <label for="check-in">CHECK-IN</label>
+                  <input type="text" placeholder="Check In" />
+               </div>
+            </div>
+            <div class="input__group">
+               <span><i class="ri-calendar-2-fill"></i></span>
+               <div>
+                  <label for="check-out">CHECK-OUT</label>
+                  <input type="text" placeholder="Check Out" />
+               </div>
+            </div>
+            <div class="input__group">
+               <span><i class="ri-user-fill"></i></span>
+               <div>
+                  <label for="guest">GUEST</label>
+                  <input type="text" placeholder="Guest" />
+               </div>
+            </div>
+            <div class="input__group input__btn">
+               <button class="btn">CHECK OUT</button>
+            </div>
+         </form>
+      </section>
+
+      <section class="section__container room__container">
+         <p class="section__subheader">OUR LIVING ROOM</p>
+         <h2 class="section__header">CONVINENT PLACE.</h2>
+         <div class="room__grid">
+            <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-1.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Deluxe Ocean View</h4>
+                  <p>
+                     Bask in luxury with breathtaking ocean views from your
+                     private suite.
+                  </p>
+                  <h5>Starting from <span>$299/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div>
+            <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-2.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Executive Cityscape Room</h4>
+                  <p>
+                     Experience urban elegance and modern comfort in the heart
+                     of the city.
+                  </p>
+                  <h5>Starting from <span>$199/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div>
+            <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-3.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Family Garden Retreat</h4>
+                  <p>
+                     Spacious and inviting, perfect for creating cherished
+                     memories with loved ones.
+                  </p>
+                  <h5>Starting from <span>$249/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div>
+            <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-3.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Family Garden Retreat</h4>
+                  <p>
+                     Spacious and inviting, perfect for creating cherished
+                     memories with loved ones.
+                  </p>
+                  <h5>Starting from <span>$249/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div>
+            <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-3.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>Family Garden Retreat</h4>
+                  <p>
+                     Spacious and inviting, perfect for creating cherished
+                     memories with loved ones.
+                  </p>
+                  <h5>Starting from <span>$249/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <%- include('layouts/footer.ejs') %>
+      <script>
+         $(document).ready(function () {
+            $(".room__grid");
+            $.ajax({
+               url: "/api/hotel",
+               type: "GET",
+               dataType: "json", // Specify data type as JSON
+               beforeSend: function (xhr) {
+                  xhr.setRequestHeader(
+                     "Authorization",
+                     `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im11aGFtbWFkIGZhdXppIiwiaWF0IjoxNzEzNzg3MzU3LCJleHAiOjE3MTM3OTA5NTd9.-TUE2Gebh_HK_qArG77yGoyTG1r6eamLNLNsc8-qI54`
+                  );
+               },
+               success: function (data) {
+                  // Process the received data
+                  const dataUser = data.additionalData;
+
+                  dataUser.map((item) => {
+                     $(".room__grid").append(`  <div class="room__card">
+               <div class="room__card__image">
+                  <img src="assets/room-3.jpg" alt="room" />
+                  <div class="room__card__icons">
+                     <span><i class="ri-heart-fill"></i></span>
+                     <span><i class="ri-paint-fill"></i></span>
+                     <span><i class="ri-shield-star-line"></i></span>
+                  </div>
+               </div>
+               <div class="room__card__details">
+                  <h4>${item.Title}</h4>
+                  <p>
+                     ${item.Description}
+                  </p>
+                  <h5>Starting from <span>${item.Price}/night</span></h5>
+                  <button class="btn">Book Now</button>
+               </div>
+            </div>`);
+                  });
+               },
+               error: function (error) {
+                  console.error("Error fetching users:", error);
+                  // Handle errors (display an error message to the user)
+               },
+            });
+         });
+      </script>
+   </body>
+</html>
